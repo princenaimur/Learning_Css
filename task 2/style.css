@@ -1,0 +1,310 @@
+/* --- PREMIUM CYBERPUNK VARIABLES --- */
+:root {
+    --bg-darker: #0a0a0f;
+    --bg-card: #11111a;
+    --primary-neon: #00ffcc;
+    --secondary-neon: #ff0055;
+    --text-main: #ffffff;
+    --text-gray: #a0a0c0;
+    --font-bangla: 'Hind Siliguri', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
+}
+
+/* --- RESET & BOX SIZING --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* বক্স সাইজিং ট্রিক */
+}
+
+body {
+    background-color: var(--bg-darker);
+    color: var(--text-main);
+    font-family: var(--font-bangla);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+/* --- TOP ALERT BANNER --- */
+.alert-banner {
+    background: linear-gradient(90deg, var(--secondary-neon), #7000ff);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 0, 85, 0.3);
+}
+.alert-banner span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* --- NAVBAR (Flexbox) --- */
+.navbar {
+    background-color: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 204, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-logo {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.nav-logo span {
+    color: var(--primary-neon);
+    animation: blink 1s infinite;
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--primary-neon);
+    transform: translateY(-2px);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: radial-gradient(circle, #151525 0%, #0a0a0f 100%);
+}
+
+.dev-tag {
+    font-family: var(--font-mono);
+    color: var(--secondary-neon);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.glow-text {
+    font-size: calc(2.5rem + 1.5vw); /* Math Function Calc এর ব্যবহার */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: neonGlow 3s infinite alternate;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.tech-stack span {
+    background-color: rgba(0, 255, 204, 0.05);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--primary-neon);
+}
+
+.cta-btn {
+    display: inline-block;
+    border: 2px solid var(--primary-neon);
+    color: var(--primary-neon);
+    padding: 12px 32px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--primary-neon);
+    color: var(--bg-darker);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+    transform: scale(1.05); /* Transform Scale */
+}
+
+/* --- TITLE GLOW COMPONENT --- */
+.title-glow {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-gray);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* --- IDENTITY SECTION (CSS Grid Layout) --- */
+.matrix-section {
+    background-color: #0d0d16;
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* কিলার গ্রিড লেআউট */
+    gap: 30px;
+}
+
+.matrix-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 35px 25px;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s;
+}
+
+.matrix-card:hover {
+    transform: translateY(-10px) scale(1.02); /* মিক্সড ট্রান্সফর্ম */
+    border-color: var(--primary-neon);
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.matrix-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.matrix-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.card-status {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--secondary-neon);
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+/* --- TARGET TIMELINE (Flexbox) --- */
+.timeline-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.timeline-box {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+    border-top: 3px solid #333;
+}
+
+.timeline-box.highlight {
+    border-top-color: var(--primary-neon);
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.05);
+}
+
+.time-node {
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    background-color: var(--bg-darker);
+    border: 2px solid #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-mono);
+    color: var(--primary-neon);
+    font-weight: bold;
+}
+
+.timeline-box.highlight .time-node {
+    border-color: var(--primary-neon);
+    background-color: var(--primary-neon);
+    color: #000;
+}
+
+.timeline-box h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-neon);
+}
+
+.timeline-box p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* --- FOOTER --- */
+.cyber-footer {
+    text-align: center;
+    padding: 40px 0;
+    font-family: var(--font-mono);
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* --- CSS ANIMATIONS --- */
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 10px rgba(0, 255, 204, 0.2); }
+    100% { text-shadow: 0 0 20px rgba(0, 255, 204, 0.6), 0 0 30px rgba(255, 0, 85, 0.4); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

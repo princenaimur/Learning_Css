@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  /* background-image: url(Full\ Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; */
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Box Model */
+.portfolio-card{
+  width: 90%; 
+  max-width: 700px;
+  background-color: #ffffff;
+  padding: 30px ;
+  margin: 40px auto;
+  border: 1px solid ;
+  border-radius: 8px;
+}
+
+/* Heading & Text Formating */
+h1{
+  font-family: 'Poppins', sans-serif;
+  color: #205ab1;
+  margin-top: 20px;
+}
+h2{
+  font-family: 'poppins',sans-serif;
+  color: rgb(70, 183, 140);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+p{
+  text-align: justify ;
+  line-height: 1.6;
+}
+
+/* List Area & Item Style */
+.Fav-Css ul{
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.Fav-Css li{
+  background-color: #eaebed;
+  color: #334155;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-left: 4px solid #2563eb;
+  font-weight:900;
+  border-radius: 18px;
+  text-align: left;
+}
+
+/* Table Design */
+.Subj-table table{
+  width: 100%;
+  border-collapse:collapse ;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* Table Header */
+.Subj-table th{
+  background-color: rgb(20, 103, 148);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* Table Row */
+.Subj-table td{
+  padding: 10px 12px;
+  text-align: left;
+  border: 1px solid rgb(39, 193, 180);
+}
+
+/* Table 1st Row */
+.wow{
+  font-weight: bold;
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+/* Header section devide */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+

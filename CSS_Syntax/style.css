@@ -1,0 +1,84 @@
+h1{
+  font-family: monospace;
+  font-family: serif;
+  font-family: cursive;
+  font-family: fantasy;
+/* serif Fonts */
+font-family: 'Times New Roman', Times, serif;
+font-family: Georgia, 'Times New Roman', Times, serif ;
+
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+a:visited{
+  color: brown;
+}
+a:Hover{
+  color: navy;
+}
+a:active{
+ color: red;
+}
+a:focus{
+  color: blueviolet;
+}
+a.btn{
+  text-decoration: none;
+  background: red;
+  border: 2px solid red;
+  color: white;
+  padding: 10px ;
+  display: inline-block;
+  font-family: sans-serif;
+  border-radius: 35px;
+}
+a.btn:hover{
+  background: rgba(255, 0, 0, 0.2);
+  color: #000000;
+}
+
+ul{
+  list-style-type: disc;
+  /* list-style-type: lower-roman; */
+  list-style-image: url();
+}
+
+table,th,td{
+  border: 1px solid tomato;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
+table{
+  width: 20%;
+}
+th{
+  background: green;
+  color: white;
+  height: 50px;
+  text-align: left;
+}
+tr:hover th,
+tr:hover td{
+background: hotpink;
+}
+
+
+/* Position */
+div{
+  position: static;
+  /* kono kaj nei */
+
+  position: relative;
+  /* must */
+
+  position: absolute;
+  /* relative er por use kora jabe . beshi aqqurate */
+
+  position: sticky;
+  /* puro control e thake */
+
+  position: fixed;
+  /* ekdom fixed hbe position .  */
+}

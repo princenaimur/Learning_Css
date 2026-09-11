@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a; /* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড ডার্ক করা হলো */
+  color: #ffffff;
+}
+
+/* হেডারকে ফুল-উইডথ এবং প্রিমিয়াম ডার্ক কালার দেওয়া হলো */
+.header {
+  padding: 15px 8%; /* ডানে-বামে সুন্দর একটি ফাঁকা জায়গা (spacing) থাকবে */
+  background: #1e1e2f; /* প্রিমিয়াম নেভি-ডার্ক ব্যাকগ্রাউন্ড */
+  display: flex;
+  align-items: center; /* ভেতরের সব এলিমেন্টকে লম্বালম্বিভাবে একদম মাঝে রাখবে */
+  justify-content: space-between; /* নাম, মেনু এবং আইকনকে সমান দূরত্বে তিন দিকে ছড়িয়ে দেবে */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* নিচে হালকা শ্যাডো */
+}
+
+/* লোগো/নামের স্টাইল */
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.highlighter {
+  color: #ff5722; /* টমেটো কালারটিকে আরেকটু ভাইব্রেন্ট করা হলো */
+}
+
+/* মেনু বার স্টাইল */
+.nav_bar {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* মার্জিনের বদলে গ্যাপ ব্যবহার করা স্ট্যান্ডার্ড */
+}
+
+.nav_bar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #cbd5e1;
+  transition: 0.3s ease; /* হোভার ইফেক্ট স্মুথ করবে */
+}
+
+/* লিংকের ওপর মাউস নিলে সুন্দর কালার চেঞ্জ হবে */
+.nav_bar li a:hover {
+  color: #ff5722;
+}
+
+/* সোশ্যাল আইকন স্টাইল */
+.icon {
+  display: flex;
+  gap: 15px;
+}
+
+.icon a {
+  color: #cbd5e1;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+/* আইকনের ওপর মাউস নিলে কালার চেঞ্জ হবে এবং সামান্য ওপরে উঠবে */
+.icon a:hover {
+  color: #ff5722;
+  transform: translateY(-2px);
+}
